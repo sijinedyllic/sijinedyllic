@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+<style>
+* { padding: 0; margin: 0; box-sizing: border-box; }
+li { list-style-type: none; }
+.clear { clear: both; }
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+
+
+#page {
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+    width: 100%;
+    max-width: 1920px;
+    height: 98px;
+    background-image: url('header_backgrond_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+}
+#logo { width: 200px; }
+#logo img { width: 100%; height: auto; }
+
+/* ---------------- NAV ---------------- */
+nav {
+    width: 100%;
+    max-width: 1920px;
+    height: 96px;
+    background-image: url('navi_background_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+nav ul img {
+    height: 60px;
+    width: auto;
+}
+
+/* ---------------- SECTION 1 ---------------- */
+#section1 {
+    width: 100%;
+    padding: 60px 0;
+    background: #F5F5F5;
+}
+
+.section1-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 calc(25% - 30px);
+    min-width: 260px;
+    background: #F4EDE3;
+    border-radius: 14px;
+    padding: 25px 25px 30px 25px;
+    color: #7A614A;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+    transition: 0.25s;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #7A614A;
+}
+
+.card p {
+    line-height: 1.6;
+    font-size: 16px;
+    white-space: pre-line;
+}
+
+/* 반응형 */
+@media (max-width: 1200px) {
+    .card { flex: 1 1 calc(50% - 30px); }
+}
+
+@media (max-width: 768px) {
+    .card { flex: 1 1 100%; }
+}
+
+/* ---------------- SECTION 2 — TREE ---------------- */
+#section2 {
+    width: 100%;
+    background: #F4EDE3;
+    text-align: center;
+    padding: 40px 0 80px 0;
+    position: relative;
+}
+
+.tree-wrapper input {
+    display: none;
+}
+
+/* 나무 이미지 공통 스타일 */
+.tree-wrapper .tree {
+    width: 90%;
+    max-width: 700px;
+    aspect-ratio: 7 / 9;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    display: none;
+    margin: 0 auto;
+}
+
+/* ▼ 1단계 */
+#tree-step1:not(:checked) + label {
+    background-image: url("tree1.png");
+    display: block;
+}
+
+/* ▼ 2단계 */
+#tree-step1:checked + label + input:not(:checked) + label {
+    background-image: url("tree2.png");
+    display: block;
+}
+
+/* ▼ 3단계 */
+#tree-step2:checked + label + input:not(:checked) + label {
+    background-image: url("tree3.png");
+    display: block;
+}
+
+/* ▼ 4단계 */
+#tree-step3:checked + label + input:not(:checked) + label {
+    background-image: url("tree4.png");
+    display: block;
+}
+
+#tree-step4:checked + label {
+    background-image: url("tree4.png");
+    display: block;
+}
+
+@media (max-width: 600px) {
+    #section2 h2 {
+        font-size: 18px;
+    }
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    width: 100%;
+    background-color: #7A614A;
+    padding: 40px 0;
+    text-align: center;
+}
+footer p {
+    color: #F4EDE3;
+    font-size: 16px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="page">
+
+<!-- ---------------- HEADER ---------------- -->
+<header>
+    <a href="INDEX.HTML" id="logo">
+        <img src="headerlogo.png" alt="로고">
+    </a>
+</header>
+
+<div class="clear"></div>
+
+<!-- ---------------- NAV ---------------- -->
+<nav>
+    <ul>
+        <a href="STORY.HTML"><img src="icon1.png" alt=""></a>
+        <a href="FAVORITE.HTML"><img src="icon2.png" alt=""></a>
+        <a href="FOREST.HTML"><img src="icon3.png" alt=""></a>
+        <a href="LIBRARY.HTML"><img src="icon4.png" alt=""></a>
+        <a href="GROWTH.HTML"><img src="icon5.png" alt=""></a>
+    </ul>
+</nav>
+
+<div class="clear"></div>
+
+<!-- ---------------- SECTION 1 ---------------- -->
+<section id="section1">
+    <div class="section1-container">
+
+        <div class="card">
+            <h3>도전</h3>
+            <p>
+저의 성장은 스스로에 대한 믿음을 깨닫게 해준 첫 도전에서 시작되었습니다.
+다소 늦은 출발이었지만, 그 과정에서 저만의 재능을 발견하고 
+앞으로 나아갈 수 있는 확신을 얻게 되었습니다.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>성취와 성장</h3>
+            <p>
+그 경험을 통해 저는 인생을 길고 넓게 바라보는 시야를 갖게 되었습니다.  
+단기적인 성과를 넘어 큰 그림을 보며 저의 길을 찾아가고 있으며,  
+이처럼 끊임없이 시야를 넓히며 성장하고 있음을 느낍니다.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>배움</h3>
+            <p>
+디지털미디어디자인과에서 영상과 3D 디자인을 깊이 배우며 역량을 키우고 있습니다.  
+더불어 책임감을 가지고 임하는 법을 익히며  
+내면적으로도 단단해지고 있습니다.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>목표</h3>
+            <p>
+영상과 3D 분야의 전문적인 인재로 성장하는 것을 목표로 삼고 있습니다.  
+나아가 제가 원하는 삶을 꾸준히 가꾸고,  
+매일 의미 있는 하루를 살아내는 것이 저의 궁극적인 목표입니다.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ---------------- SECTION 2 ---------------- -->
+<section id="section2">
+    <h2>나무를 클릭하면 자라납니다</h2>
+    <br><br>
+
+    <div class="tree-wrapper">
+        <input type="checkbox" id="tree-step1">
+        <label for="tree-step1" class="tree"></label>
+
+        <input type="checkbox" id="tree-step2">
+        <label for="tree-step2" class="tree"></label>
+
+        <input type="checkbox" id="tree-step3">
+        <label for="tree-step3" class="tree"></label>
+
+        <input type="checkbox" id="tree-step4">
+        <label for="tree-step4" class="tree"></label>
+    </div>
+</section>
+
+<div class="clear"></div>
+
+<!-- ---------------- FOOTER ---------------- -->
+<footer>
+    <p>© 2025 Room Of ME. All Rights Reserved.</p>
+    <p>사용자 취향 , 감성 , 성장 을 세계관 형태로 표현하는 개인 기록형 웹사이트</p>
+</footer>
+
+</div>
+</body>
+</html>

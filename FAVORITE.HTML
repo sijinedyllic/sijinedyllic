@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<style>
+* { margin: 0; padding: 0; }
+.clear { clear: both; }
+li { list-style-type: none; }
+
+header {
+    width: 100%;
+    max-width: 1920px;
+    height: 98px;
+    background-image: url('header_backgrond_img.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+}
+#logo { width: 200px; }
+#logo img { width: 100%; }
+
+nav {
+    width: 100%;
+    max-width: 1920px;
+    height: 96px;
+    background-image: url('navi_background_img.png');
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+}
+nav ul {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+nav ul img {
+    height: 60px;
+}
+
+/* ------------------- GRID ------------------- */
+.favorite-grid {
+    width: 100%;
+    max-width: 1500px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.favorite-grid .item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #D9D9D9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.favorite-grid .item a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* ------------------- IMAGE ------------------- */
+.favorite-grid .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+    display: block;
+}
+.favorite-grid .item span {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    font-size: 14px;
+    color: white;
+    text-shadow: 0 0 4px black;
+}
+
+/* ------------------- 반응형 ------------------- */
+@media (max-width: 1024px) {
+    .favorite-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .favorite-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ------------------- FOOTER ------------------- */
+footer {
+    width: 100%;
+    background-color: #7A614A;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+footer p {
+    color: #F4EDE3;
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <a href="INDEX.HTML" id="logo">
+        <img src="headerlogo.png" alt="로고">
+    </a>
+</header>
+
+<nav>
+    <ul>
+        <a href="STORY.HTML"><img src="icon1.png"></a>
+        <a href="FAVORITE.HTML"><img src="icon2.png"></a>
+        <a href="FOREST.HTML"><img src="icon3.png"></a>
+        <a href="LIBRARY.HTML"><img src="icon4.png"></a>
+        <a href="GROWTH.HTML"><img src="icon5.png"></a>
+    </ul>
+</nav>
+
+
+<!-- ------------------- FAVORITE GRID ------------------- -->
+<div class="favorite-grid">
+
+    <div class="item"><a href="favorite_detail1.html">
+        <img src="favorite1.jpg"><span>1</span>
+    </a></div>
+
+    <div class="item"><a href="favorite_detail2.html">
+        <img src="favorite2.jpg"><span>2</span>
+    </a></div>
+
+    <div class="item"><a href="favorite_detail3.html">
+        <img src="favorite3.jpg"><span>3</span>
+    </a></div>
+
+    <div class="item"><a href="favorite_detail4.html">
+        <img src="favorite4.jpg"><span>4</span>
+    </a></div>
+
+    <div class="item"><a href="favorite_detail5.html">
+        <img src="favorite5.jpg"><span>5</span>
+    </a></div>
+
+    <div class="item"><a href="favorite_detail6.html">
+        <img src="favorite6.jpg"><span>6</span>
+    </a></div>
+
+    <div class="item"><a href="favorite_detail7.html">
+        <img src="favorite7.jpg"><span>7</span>
+    </a></div>
+
+    <div class="item"><a href="favorite_detail8.html">
+        <img src="favorite8.jpg"><span>8</span>
+    </a></div>
+
+    <div class="item"><a href="favorite_detail9.html">
+        <img src="favorite9.jpg"><span>9</span>
+    </a></div>
+
+    <div class="item"><a href="favorite_detail10.html">
+        <img src="favorite10.jpg"><span>10</span>
+    </a></div>
+
+    <div class="item"><a href="favorite_detail11.html">
+        <img src="favorite11.jpg"><span>11</span>
+    </a></div>
+
+    <div class="item"><a href="favorite_detail12.html">
+        <img src="favorite12.jpg"><span>12</span>
+    </a></div>
+
+</div>
+
+
+<footer>
+    <p>© 2025 Room Of ME. All Rights Reserved.</p>
+    <p>사용자 취향 , 감성 , 성장 을 세계관 형태로 표현하는 개인 기록형 웹사이트</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+<style>
+/* ---------------- 기본값 초기화 ---------------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+li { list-style-type: none; }
+html, body { overflow-x: hidden; width: 100%; }
+
+/* ---------------- HEADER ---------------- */
+header {
+    width: 100%;
+    max-width: 1920px;
+    height: 98px;
+    background-image: url('header_backgrond_img.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+}
+#logo { width: 200px; }
+#logo img { width: 100%; }
+
+/* ---------------- NAV ---------------- */
+nav {
+    width: 100%;
+    max-width: 1920px;
+    height: 96px;
+    background-image: url('navi_background_img.png');
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+}
+nav ul {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+nav ul img {
+    height: 60px;
+}
+
+/* ---------------- CONTENT LAYOUT ---------------- */
+.detail-wrapper {
+    width: 100%;
+    max-width: 1500px;
+    margin: 60px auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.detail-image {
+    width: 40%;
+    height: 400px;
+    background: #D9D9D9;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 400px;
+    font-size: 14px;
+}
+.detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* 비율 유지 + 박스 꽉 채우기 */
+    border-radius: 4px;
+    display: block;
+}
+
+
+.detail-text-box {
+    width: 60%;
+    background: #E8DCCF;
+    border-radius: 10px;
+    padding: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    width: 100%;
+    background-color: #7A614A;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+footer p {
+    color: #F4EDE3;
+    font-size: 16px;
+}
+/* ---------------- RESPONSIVE ---------------- */
+
+/* 태블릿 (1024px 이하) */
+@media screen and (max-width: 1024px) {
+    header { padding-left: 20px; }
+    #logo { width: 150px; }
+
+    nav { padding-right: 20px; }
+    nav ul img { height: 50px; }
+
+    .detail-wrapper {
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+    .detail-image { height: 350px; }
+    .detail-text-box { padding: 30px; font-size: 17px; }
+}
+
+/* 모바일 (768px 이하) */
+@media screen and (max-width: 768px) {
+    header { height: 80px; }
+    #logo { width: 130px; }
+
+    nav { height: 80px; }
+    nav ul img { height: 40px; }
+
+    .detail-wrapper {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .detail-image,
+    .detail-text-box {
+        width: 100%;
+    }
+
+    .detail-image { height: 280px; }
+    .detail-text-box { padding: 25px; font-size: 16px; }
+
+    footer p { font-size: 14px; }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media screen and (max-width: 480px) {
+    #logo { width: 110px; }
+
+    nav ul img { height: 32px; }
+
+    .detail-image { height: 220px; }
+
+    .detail-text-box {
+        padding: 20px;
+        font-size: 15px;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div id="logo">
+        <img src="headerlogo.png">
+    </div>
+</header>
+
+<!-- NAV -->
+<nav>
+    <ul>
+        <a href="STORY.HTML"><img src="icon1.png"></a>
+        <a href="FAVORITE.HTML"><img src="icon2.png"></a>
+        <a href="FOREST.HTML"><img src="icon3.png"></a>
+        <a href="LIBRARY.HTML"><img src="icon4.png"></a>
+        <a href="GROWTH.HTML"><img src="icon5.png"></a>
+    </ul>
+</nav>
+
+<!-- DETAIL CONTENT -->
+<div class="detail-wrapper">
+
+    <div class="detail-image">
+      <img src="favorite12.jpg">
+    </div>
+
+    <div class="detail-text-box">
+        <h2>등갈비김치찜</h2>
+        <br>
+        <p>
+            고기를 무척 좋아하는데 특히 엄마가 해주신 등갈비 김치찜을 좋아한다.<BR>
+            먹는 즐거움이 좋고 가리는 음식 없이 다 잘 먹는 편이다. 그 중 한식을 사랑한다.
+        </p>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 Room Of ME. All Rights Reserved.</p>
+    <p>사용자 취향 , 감성 , 성장 을 세계관 형태로 표현하는 개인 기록형 웹사이트</p>
+</footer>
+
+</body>
+</html>

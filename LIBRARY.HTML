@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+li { list-style-type: none; }
+a { text-decoration: none; color: inherit; }
+html { scroll-behavior: smooth; }
+
+/* ---------------- HEADER ---------------- */
+header {
+    width: 100%;
+    height: 90px; 
+    background-image: url('header_backgrond_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+#logo { width: 180px; } 
+#logo img { width: 100%; height: auto; }
+
+/* ---------------- NAV ---------------- */
+nav {
+    width: 100%;
+    height: 88px; 
+    background-image: url('navi_background_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 36px;
+}
+nav ul {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+nav ul img {
+    height: 52px;
+    width: auto;
+}
+
+/* ---------------- MAIN LAYOUT ---------------- */
+#main {
+    width: 100%;
+    max-width: 1600px;
+    margin: 40px auto;
+    display: flex;
+    gap: 36px; 
+}
+
+/* LEFT CARDS */
+.left-area {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+.card {
+    width: 100%;
+    background: #F4EDE3;
+    border-radius: 12px;
+    display: flex;
+    gap: 24px; 
+    padding: 24px; 
+    align-items: center;
+}
+
+.card-img {
+    width: 33%; 
+    aspect-ratio: 1 / 1;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card p {
+    width: 60%;
+    font-size: 17px; 
+    line-height: 1.45;
+}
+
+/* ---------------- TIMELINE ASIDE ---------------- */
+.aside {
+    width: 30%;
+    background: #F4EDE3;
+    padding: 220px 28px 20px 20px;
+    border-radius: 12px;
+}
+
+.timeline-item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline-item p {
+    margin-bottom: 16px;
+    font-size: 17px; 
+    font-weight: 700;
+}
+
+.circle {
+    width: 220px;  
+    height: 220px; 
+    background: white;
+    border-radius: 50%;
+    border: 2px solid #C7CDAA;
+    margin: 0 auto;
+    padding: 22px;  
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+
+    font-size: 15.5px; 
+    line-height: 1.5;  
+
+    overflow-wrap: break-word;
+}
+
+/* 연결선 */
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 40px;
+    background: #C7CDAA;
+    top: calc(100% + 0px);
+}
+.timeline-item:last-child::after {
+    display: none;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    width: 100%;
+    background-color: #7A614A;
+    padding: 32px 0;
+    text-align: center;
+    margin-top: 60px; 
+}
+footer p {
+    color: #F4EDE3;
+    font-size: 15px; 
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1100px) {
+    #main { flex-direction: column; }
+    .left-area, .aside { width: 100%; }
+    .aside { margin-top: 30px; }
+}
+
+@media (max-width: 600px) {
+    .card { flex-direction: column; text-align: center; }
+    .card-img { width: 80%; }
+    .card p { width: 100%; }
+
+    .circle {
+        width: 180px; 
+        height: 180px;
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <a href="INDEX.HTML" id="logo">
+        <img src="headerlogo.png" alt="로고">
+    </a>
+</header>
+
+<!-- NAV -->
+<nav>
+    <ul>
+        <a href="STORY.HTML"><img src="icon1.png"></a>
+        <a href="FAVORITE.HTML"><img src="icon2.png"></a>
+        <a href="FOREST.HTML"><img src="icon3.png"></a>
+        <a href="LIBRARY.HTML"><img src="icon4.png"></a>
+        <a href="GROWTH.HTML"><img src="icon5.png"></a>
+    </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div id="main">
+
+    <!-- LEFT CARDS -->
+    <div class="left-area">
+
+        <div class="card">
+            <div class="card-img"><img src="library1.jpg"></div>
+            <p>2021년, 첫 미술전공전을 했습니다.
+                 작품명은 [여행의 순간. 유포리아] 이며, 달마다의 여행의 순간을 그려 캘린더로 제작했습니다. 
+                 처음 나만의 작품을 만들어보는 뜻깊은 경험이었습니다. </p>
+        </div>
+
+        <div class="card">
+            <div class="card-img"><img src="library2.jpg"></div>
+            <p>2023년, 크리스마스를 기념한 삼성역 미디어아트를 보러 갔습니다. 3D에 관심이 많아 기대를 잔뜩했어요.
+                미디어아트와 모션그래픽에 더욱 관심을 갖게 된 계기였습니다.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-img"><img src="library3.jpg"></div>
+            <p>짧은 기간 플라워디자인과를 다녔었습니다. 제겐 새로운 도전이었고 꽃을 좋아해서 힐링되는 시간이었습니다.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-img"><img src="library4.jpg"></div>
+            <p>2025년 여름에 전주로 가족여행을 다녀왔습니다. 거리와 풍경이 너무 아름다워 좋은 추억이 되었습니다.
+                가족과 함께하는 여행이 저에겐 무척 소중한 시간입니다.
+            </p>
+        </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="aside">
+
+        <div class="timeline-item">
+            <p>2011년, 첫 초등학교 입학</p>
+            <div class="circle">작고 설레는 발걸음으로 세상의 문을 처음 두드리던 순간.</div>
+        </div>
+
+        <div class="timeline-item">
+            <p>2015년, 첫 덕질</p>
+            <div class="circle">화면 너머의 누군가를 보며 꿈을 키우고, 가슴 설레던 시간들.</div>
+        </div>
+
+        <div class="timeline-item">
+            <p>2019년, 고등학교 입시</p>
+            <div class="circle">늦었지만 의미 있었던 도전. 재능을 발견한 전환점.</div>
+        </div>
+
+        <div class="timeline-item">
+            <p>2023년, 대학 입시 준비</p>
+            <div class="circle">미래를 향해 전력을 다했던 뜨거운 성장의 시간.</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 Room Of ME. All Rights Reserved.</p>
+    <p>사용자 취향 , 감성 , 성장 을 세계관 형태로 표현하는 개인 기록형 웹사이트</p>
+</footer>
+
+</body>
+</html>

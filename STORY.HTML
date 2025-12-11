@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+<style>
+* { padding: 0; margin: 0; box-sizing: border-box; }
+li { list-style-type: none; }
+.clear { clear: both; }
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+
+#page { width: 100%; margin: 0 auto; }
+
+/* ---------------- HEADER ---------------- */
+header {
+    width: 100%;
+    max-width: 1920px;
+    height: 98px;
+    background-image: url('header_backgrond_img.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+}
+#logo { width: 200px; }
+#logo img { width: 100%; height: auto; }
+
+/* ---------------- NAV ---------------- */
+nav {
+    width: 100%;
+    max-width: 1920px;
+    height: 96px;
+    background-image: url('navi_background_img.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+nav ul img {
+    height: 60px;
+    width: auto;
+}
+
+/* ---------------- STORY PAGE WRAP ---------------- */
+#story-wrap {
+    width: 100%;
+    max-width: 1400px;
+    margin: 60px auto 120px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+}
+
+/* ---------------- MAIN ---------------- */
+main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.story-section {
+    width: 100%;
+    background-color: #F4EDE3;
+    padding: 30px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.story-img {
+    width: 230px;
+    height: auto;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.story-text-box {
+    flex-grow: 1;
+    min-width: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-text-box h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #7A614A;
+}
+
+/* ---------------- ASIDE ---------------- */
+aside {
+    width: 350px;
+    background-color: #F4EDE3;
+    padding: 30px;
+    border-radius: 18px;
+    flex-shrink: 0;
+    height: fit-content;
+}
+aside h3 {
+    color: #7A614A;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    width: 100%;
+    background-color: #7A614A;
+    padding: 40px 0;
+    text-align: center;
+}
+footer p {
+    color: #F4EDE3;
+    font-size: 16px;
+}
+
+/* ===========반응형 시작 =========== */
+@media (max-width: 1199px) {
+
+    #story-wrap {
+        flex-direction: column; 
+        gap: 60px;
+    }
+
+    aside {
+        width: 100%; 
+    }
+
+    .story-section {
+        gap: 20px;
+    }
+}
+
+/* ========== 반응형 ============== */
+@media (max-width: 767px) {
+
+    nav ul img { height: 46px; }
+
+    #story-wrap { padding: 0 10px; gap: 40px; }
+
+    .story-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .story-img {
+        width: 100%;
+        max-width: 330px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .story-text-box h3 {
+        font-size: 22px;
+    }
+
+    aside {
+        width: 100%;
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="page">
+
+<!-- ---------------- HEADER ---------------- -->
+<header>
+    <a href="INDEX.HTML" id="logo">
+        <img src="headerlogo.png" alt="로고">
+    </a>
+</header>
+
+<!-- ---------------- NAV ---------------- -->
+<nav>
+    <ul>
+        <a href="STORY.HTML"><img src="icon1.png"></a>
+        <a href="FAVORITE.HTML"><img src="icon2.png"></a>
+        <a href="FOREST.HTML"><img src="icon3.png"></a>
+        <a href="LIBRARY.HTML"><img src="icon4.png"></a>
+        <a href="GROWTH.HTML"><img src="icon5.png"></a>
+    </ul>
+</nav>
+
+<!-- ---------------- CONTENT ---------------- -->
+<div id="story-wrap">
+
+    <!-- LEFT MAIN CONTENT -->
+    <main>
+
+        <!-- SECTION 1 -->
+        <section class="story-section">
+            <img src="자기소개_img.jpg" class="story-img">
+            <div class="story-text-box">
+                <h3>자기소개</h3>
+                <p>
+                    안녕하세요, 정시진입니다. 저는 어떤 일이든 최선을 다해 몰입하며,
+                    사소한 디테일 하나에도 진심을 다합니다. 때론 지치기도 하지만,
+                    꼼꼼하고 성실하게 끝까지 파고드는 저의 집념이 신뢰할 수 있는
+                    결과와 가치를 만드는 강점이라 생각합니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2 -->
+        <section class="story-section">
+            <img src="성향성격_img.jpg" class="story-img">
+            <div class="story-text-box">
+                <h3>성향 & 성격</h3>
+                <p>
+                    저는 따뜻하고 정중한 태도로 사람들과 소통해요. 아기자기하고
+                    감성적인 것에 마음이 끌리며, 일상에서 소소한 아름다움을 발견하는 걸
+                    좋아합니다. 늘 솔직함과 열린 마음으로 세상을 바라보고 싶어요.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section class="story-section">
+            <img src="현재의나_img.jpg" class="story-img">
+            <div class="story-text-box">
+                <h3>현재의 나</h3>
+                <p>
+                    저는 디지털미디어디자인과에서 세부 분야 하나하나를 배워가는 과정이
+                    흥미롭습니다. 특히 영상과 3D 디자인에 깊은 흥미가 있고,
+                    여행을 통해 새로운 경험을 얻으며 성장하는 순간을 소중하게 생각합니다.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside>
+        <h3>세계관 소개</h3>
+           <p>이곳은 '정시진', 저의 작고 소중한 이야기들과 마음속 풍경들을 차곡차곡 모아둔 아카이브입니다. 
+            거창한 의미보다는 평범한 일상 속에서 발견하는 반짝이는 순간들, 그리고 저를 채워주는 다양한 감정들을 솔직하게 기록하고 있습니다.
+             <br><br><br>
+            이 웹사이트는 제 마음이 편안히 머무는 '나만의 방'처럼 아늑하고, 제 발자취가 담긴 '나의 스토리'가 조용히 이어집니다.
+            여행부터 그림, 게임, 음악, 요리, 독서 등 제가 좋아하는 '관심사'들은 각자의 자리에서 소중한 빛을 발하며,
+            이 모든 소소한 경험들은 어느새 '나의 성장'을 위한 작은 씨앗이 되어줍니다.
+             <br><br><br>
+            때때로 저는 '감성의 숲'을 거닐며 조용히 생각에 잠기곤 하고,
+            저만의 소중한 기억들은 '시간의 도서관'에 한 장 한 장 정성껏 채워집니다.
+             <br><br><br>
+            이곳을 찾아주신 모든 분들이 제 이야기 속에서 잠시나마 따뜻한 공감을 얻거나,
+            소박한 즐거움을 발견하시기를 바랍니다. 이 공간이 여러분에게도 잠시 쉬어갈 수 있는 아늑한 곳이 되기를 소망합니다.
+        </p>
+    </aside>
+
+</div>
+
+<!-- ---------------- FOOTER ---------------- -->
+<footer>
+    <p>© 2025 Room Of ME. All Rights Reserved.</p>
+    <p>사용자 취향 , 감성 , 성장 을 세계관 형태로 표현하는 개인 기록형 웹사이트</p>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li { list-style-type: none; }
+.clear { clear: both; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#page {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+    width: 100%;
+    max-width: 1920px;
+    height: 98px;
+    background-image: url('header_backgrond_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+}
+
+#logo {
+    width: 200px;
+}
+
+#logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* ---------------- NAV ---------------- */
+nav {
+    width: 100%;
+    max-width: 1920px;
+    height: 96px;
+    background-image: url('navi_background_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+nav ul img {
+    height: 60px;
+    width: auto;
+}
+
+/* ---------------- SECTION 1 ---------------- */
+#section1 {
+    width: 100%;
+    height: 888px;
+    background-image: url('myroom_background_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 오브젝트 공통 */
+.object {
+    position: absolute;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.25s;
+    max-width: 100%;
+}
+
+/* PC 기본 위치 & 크기 */
+.object1 { width: 17%; top: 12%; left: 5%; }
+.object2 { width: 15%; bottom: 14%; left: 22%; }
+.object3 { width: 17%; top: 55%; left: 60%; transform: translateX(-50%); }
+.object4 { width: 18%; top: 14%; right: 6%; }
+
+.object:hover { transform: scale(1.05); }
+.object3:hover { transform: translateX(-50%) scale(1.05); }
+
+/* ✔ 태블릿 반응형 — 크기만 축소 */
+@media (max-width: 1200px) {
+    #section1 { height: 70vh; }
+
+    .object1 { width: 15%; }
+    .object2 { width: 13%; }
+    .object3 { width: 15%; }
+    .object4 { width: 16%; }
+}
+@media (max-width: 768px) {
+    #section1 { height: 60vh; }
+
+    .object1 { width: 13%; }
+    .object2 { width: 11%; }
+    .object3 { width: 13%; }
+    .object4 { width: 14%; }
+}
+
+@media (max-width: 500px) {
+    #section1 { height: 55vh; }
+    .object1 { width: 12%; top: 10%; left: 6%; }
+    .object2 { width: 10%; bottom: 12%; left: 24%; }
+    .object3 { width: 12%; top: 58%; left: 58%; }
+    .object4 { width: 13%; top: 12%; right: 5%; }
+}
+
+/* ---------------- SECTION 2 ---------------- */
+#section2 {
+    width: 100%;
+    padding: 80px 0;
+    background-color: transparent;
+}
+
+.feature-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.feature-item-text-box {
+    flex-grow: 1;
+    width: 50%;
+    padding: 20px;
+    background-color: #F4EDE3;
+    border-radius: 8px;
+}
+
+.feature-item-text-box h3 {
+    font-size: 28px;
+    color: #7A614A;
+    margin-bottom: 15px;
+}
+
+.feature-item-image-wrapper img {
+    width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .feature-item-text-box,
+    .feature-item-image-wrapper {
+        width: 100%;
+    }
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    width: 100%;
+    background-color: #7A614A;
+    padding: 40px 0;
+    text-align: center;
+}
+footer p {
+    color: #F4EDE3;
+    font-size: 16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="page">
+
+<!-- ---------------- HEADER ---------------- -->
+<header>
+    <div id="logo">
+        <img src="headerlogo.png" alt="로고">
+    </div>
+</header>
+
+<div class="clear"></div>
+
+<!-- ---------------- NAV ---------------- -->
+<nav>
+    <ul>
+        <a href="STORY.HTML"><img src="icon1.png"></a>
+        <a href="FAVORITE.HTML"><img src="icon2.png"></a>
+        <a href="FOREST.HTML"><img src="icon3.png"></a>
+        <a href="LIBRARY.HTML"><img src="icon4.png"></a>
+        <a href="GROWTH.HTML"><img src="icon5.png"></a>
+    </ul>
+</nav>
+
+<div class="clear"></div>
+
+<!-- ---------------- SECTION 1 ---------------- -->
+<section id="section1">
+    <img src="object1.png" class="object object1" onclick="location.href='#feature1'">
+    <img src="object2.png" class="object object2" onclick="location.href='#feature2'">
+    <img src="object3.png" class="object object3" onclick="location.href='#feature3'">
+    <img src="object4.png" class="object object4" onclick="location.href='#feature4'">
+</section>
+
+<div class="clear"></div>
+
+<!-- ---------------- SECTION 2 ---------------- -->
+<section id="section2">
+    <div class="feature-container">
+
+        <div id="feature1" class="feature-item">
+            <div class="feature-item-image-wrapper">
+                <img src="object1.png">
+            </div>
+            <div class="feature-item-text-box">
+                <h3>KEYRING</h3>
+                <p>설날 할머니댁에 가는 길 들른 마트에서,<br>새해 기념 아빠께 선물 받은 인형 키링</p>
+            </div>
+        </div>
+
+        <div id="feature2" class="feature-item">
+            <div class="feature-item-image-wrapper">
+                <img src="object2.png">
+            </div>
+            <div class="feature-item-text-box">
+                <h3>HEADSET</h3>
+                <p>내가 좋아하는 음악을 더 생생하게,<br>감성 한스푼 추가한 화이트 헤드셋</p>
+            </div>
+        </div>
+
+        <div id="feature3" class="feature-item">
+            <div class="feature-item-image-wrapper">
+                <img src="object3.png">
+            </div>
+            <div class="feature-item-text-box">
+                <h3>FILM CAMERA</h3>
+                <p>친구에게 받은 깜짝 선물,<br>일상의 작은 활력이 되는 필름 카메라</p>
+            </div>
+        </div>
+
+        <div id="feature4" class="feature-item">
+            <div class="feature-item-image-wrapper">
+                <img src="object4.png">
+            </div>
+            <div class="feature-item-text-box">
+                <h3>PERFUME</h3>
+                <p>친구와 향수 공방을 찾아 직접 만든 향수,<br>그 겨울 날의 시원한 향기를 담아</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="clear"></div>
+
+<!-- ---------------- FOOTER ---------------- -->
+<footer>
+    <p>© 2025 Room Of ME. All Rights Reserved.</p>
+    <p>사용자 취향 , 감성 , 성장 을 세계관 형태로 표현하는 개인 기록형 웹사이트</p>
+</footer>
+
+</div>
+</body>
+</html>
